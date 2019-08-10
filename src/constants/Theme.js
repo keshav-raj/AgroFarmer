@@ -9,18 +9,23 @@ export default {
     BORDER_COLOR: '#E7E7E7',
     ICON: '#4A4A4A',
     PRIMARY: '#53714B',
+    PRIMARY_TEXT: '#4A4A4A',
     PALLETONE: '#EA2A5E',
     PALLETTWO: '#F6830A',
     HEAD_TEXT: '#53714B',
     TEXT: '#B8B6B6',
-    BACKGROUND: '#F8F8F8',
+    BACKGROUND: 'rgba(207,239,215,0.2)',
     DISABLED_BUTTON: '#4A4A4A',
     BUTTON_TEXT: '#FFFFFF',
+    ON_PRIMARY: '#FFFFFF',
+    ON_SECONDARY:'rgba(83, 113, 75,0.9)',
+    SEMI_TRANPARENT: 'rgba(0,0,0,0.4)'
   },
   SIZES: {
     BLOCK_SHADOW_RADIUS: 2,
     HEAD_TEXT: 18,
     TEXT: 16,
     LABLE: 12,
+    MAIN_TITLE: 20,
   }
 };

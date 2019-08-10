@@ -6,6 +6,7 @@ const { modifiedStore } = configureStore({});
 const store = modifiedStore;
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Remote debugger']);
+console.disableYellowBox = true;
 
 
 export default function App() {

@@ -8,27 +8,30 @@ import {
   createStackNavigator,
   createBottomTabNavigator} from 'react-navigation';
 import {Icon} from 'native-base';
-import {appTheme} from '../constants';
+import { appTheme, navigatorScreen} from '../constants';
 
 import {
   Login,
   OTPpage,
   Home,
   Store,
-  Settings} from '../components/screens';
+  Settings,
+  ServiceBooking,
+  ServiceBookingResult} from '../components/screens';
 
 const AuthNavigator = createStackNavigator({
-  Login: {screen: Login},
-  OTPpage: {screen: OTPpage},
+  [navigatorScreen.Login]: {screen: Login},
+  [navigatorScreen.OTPpage]: {screen: OTPpage},
 },
 {
   headerMode: 'none',
 });
 
+
 const MainTabNavigator = createBottomTabNavigator({
-  Home: {screen: Home},
-  Store: {screen: Store},
-  Settings: {screen: Settings},
+  [navigatorScreen.Home]: {screen: Home},
+  // Store: {screen: Store},
+  [navigatorScreen.Settings]: {screen: Settings},
 },
 {
   defaultNavigationOptions: ({navigation}) => ({
@@ -56,10 +59,19 @@ const MainTabNavigator = createBottomTabNavigator({
   },
 });
 
+const MainStack = createStackNavigator({
+  [navigatorScreen.MainTabNavigator]: { screen: MainTabNavigator },
+  [navigatorScreen.ServiceBooking]: { screen: ServiceBooking },
+  [navigatorScreen.ServiceBookingResult]: { screen: ServiceBookingResult},
+},
+  {
+    headerMode: 'none',
+  });
+
 const Navigation = createAppContainer(
     createSwitchNavigator({
-      Auth: AuthNavigator,
-      MainTabNavigator: MainTabNavigator,
+      [navigatorScreen.MainStack]: MainStack,
+      [navigatorScreen.Auth]: AuthNavigator,
     })
 );
 export default Navigation;

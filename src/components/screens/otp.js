@@ -15,7 +15,7 @@ class OtpScreen extends React.Component {
           <Image
             source={require('../../../assets/images/Logo.png')}
             resizeMode="cover"
-            style={styles.thumb}
+            style={Styles.thumb}
           />
           <Text
             style={{...Styles.mrTop5, ...Styles.brandStyle}}

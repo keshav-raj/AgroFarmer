@@ -13,14 +13,18 @@ export default class ButtonComponent extends React.Component {
       BackgroundColor,
       isDiabled,
       Color,
+      isSmallButton,
+      buttonSecondary
     } = this.props;
     return (
       <TouchableOpacity
-        style={{...styles.button, backgroundColor: BackgroundColor}}
+        style={[isSmallButton 
+          ? styles.smallButton 
+          : buttonSecondary ? styles.buttonSecondary : styles.button, { backgroundColor: BackgroundColor ||  'inherit'}]}
         disabled={isDiabled}
         onPress={() => onClickCallBack()}>
         <Text
-          style={{color: Color || appTheme.COLORS.BUTTON_TEXT}}>
+          style={{ color: buttonSecondary ? appTheme.COLORS.PRIMARY :  Color || appTheme.COLORS.BUTTON_TEXT}}>
           {text}
         </Text>
       </TouchableOpacity>
