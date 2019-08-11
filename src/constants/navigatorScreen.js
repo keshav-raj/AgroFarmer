@@ -9,4 +9,5 @@ export default {
     AuthNavigator:'AuthNavigator',
     MainTabNavigator:'MainTabNavigator',
     MainStack:'MainStack',
+    ServiceDetails: 'ServiceDetails',
 }

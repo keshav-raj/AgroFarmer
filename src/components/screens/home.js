@@ -53,12 +53,12 @@ class Home extends React.Component {
                     <Text style={styles.mainTitle}>On Going Services</Text>
                     <CardComponentOne
                     renderData={products[0]} 
-                    callBackOne={() => true}
+                    callBackOne={() => navigate(navigatorScreen.ServiceDetails)}
                     callBackTwo={() => true}
                     callBackThree={() => true} />
                     <CardComponentOne
                         renderData={products[1]}
-                        callBackOne={() => true}
+                        callBackOne={() => navigate(navigatorScreen.ServiceDetails)}
                         callBackTwo={() => true}
                         callBackThree={() => true} />
                 </ScrollView>

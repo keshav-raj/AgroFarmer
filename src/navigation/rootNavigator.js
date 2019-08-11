@@ -17,7 +17,8 @@ import {
   Store,
   Settings,
   ServiceBooking,
-  ServiceBookingResult} from '../components/screens';
+  ServiceBookingResult,
+  ServiceDetails} from '../components/screens';
 
 const AuthNavigator = createStackNavigator({
   [navigatorScreen.Login]: {screen: Login},
@@ -63,6 +64,7 @@ const MainStack = createStackNavigator({
   [navigatorScreen.MainTabNavigator]: { screen: MainTabNavigator },
   [navigatorScreen.ServiceBooking]: { screen: ServiceBooking },
   [navigatorScreen.ServiceBookingResult]: { screen: ServiceBookingResult},
+  [navigatorScreen.ServiceDetails]: { screen: ServiceDetails},
 },
   {
     headerMode: 'none',

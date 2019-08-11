@@ -34,8 +34,29 @@ class ServiceBookingResult extends React.Component {
                         style={[styles.fullWidthImage, { zIndex: 0 }]}
                     />
                     <View style={[styles.CardComponentOne, componentStyle.detailDiv]}>
-                        <Text style={[styles.cardText]}>Found 10 Tractors</Text>
-                        <Text style={[styles.cardText]}>Avg.Price 500Rs/hr</Text>
+                        <View style={componentStyle.textDiv}>
+                            <Icon
+                                type="FontAwesome"
+                                name="search"
+                                style={{
+                                    fontSize: appTheme.SIZES.TEXT,
+                                    color: appTheme.COLORS.ON_SECONDARY,
+                                    paddingRight: 10,
+                                }} />
+                            <Text style={styles.cardText}>Found 10 Tractors</Text>
+                        </View>
+                        <View style={componentStyle.textDiv}>
+                            <Icon
+                                type="FontAwesome"
+                                name="money"
+                                style={{
+                                    fontSize: appTheme.SIZES.TEXT,
+                                    color: appTheme.COLORS.ON_SECONDARY,
+                                    paddingRight: 10,
+                                }} />
+                            <Text style={styles.cardText}>Avg.Price 500Rs/hr</Text>
+                        </View>
+
                     </View>
                 </View>
                 <View style={Styles.footer}>
@@ -62,7 +83,13 @@ const componentStyle = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 20,
         flex: 1,
-    }
+    },
+    textDiv:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+    },
 })
 export default ServiceBookingResult;
 
